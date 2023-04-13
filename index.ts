@@ -1,8 +1,10 @@
 import express,{Application} from "express"
+import { mainApp } from "./mainApp";
 
 
 const app:Application = express()
 
+mainApp(app)
 
 const server = app.listen(5000,()=>{
     console.log(" Valerian server is ready to rock");
