@@ -1,6 +1,7 @@
 import express, { Application,Request,Response } from "express"
 import cors from "cors"
 import ejs from "ejs"
+import mongoose from "mongoose"
 
 const data={
     name:"Valerian",
