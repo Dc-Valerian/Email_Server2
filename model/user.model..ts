@@ -35,6 +35,10 @@ const userModel = new mongoose.Schema({
     RCNumber:{
         type:String,
     },
+    staff:[{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:"company"
+    }]
 },{timestamps:true},)
 
 export default mongoose.model<iUserData>("users",userModel)

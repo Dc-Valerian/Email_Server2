@@ -9,6 +9,7 @@ interface iUser {
     OTP:string,
     RCNumber:string,
     staffID:string,
+    staff:{}[]
 }
 
 interface iUserData extends iUser,mongoose.Document{}
@@ -35,6 +36,10 @@ const companyModel = new mongoose.Schema({
     verified:{
         type:String,
     },
+    staff:[{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:"users"
+    }]
 },{timestamps:true},)
 
-export default mongoose.model<iUserData>("users",companyModel)
+export default mongoose.model<iUserData>("company",companyModel)
